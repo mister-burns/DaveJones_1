@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>TV Ratr: <%= yield :title %></title>
+  <%= stylesheet_link_tag    "application", media: "screen", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "print", media: "print", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+
+<div id="wrapper"><!-- #wrapper -->
+
+  <nav><!-- top nav -->
+    <%= render :partial => 'shared/navigation' %>
+  </nav><!-- end of top nav -->
+
+  <header><!-- header -->
+    <div id="headerlogo"><%= image_tag "TVRatr Logo v6 (smaller).png", :alt => "Dave's Picture" %></div>
+    <h1><a href="#">TV Ratr</a></h1>
+    <h2>Find the best TV Shows here!</h2>
+  </header><!-- end of header -->
+  <section id="main"><!-- #main content and sidebar area -->
+            <section id="content"><!-- #content -->
+<%= yield %>
+
+  </section><!-- end of #content -->
+
+    <aside id="sidebar"><!-- sidebar -->
+      <h3>Things To Do</h3>
+      <ul>
+        <li><a href="#">Create Meals</a></li>
+        <li><a href="#">Chat With Friends</a></li>
+        <li><a href="#">Swap Recipes</a></li>
+        <li><a href="#">Play Games</a></li>
+        <li><a href="#">Buy Stuff</a></li>
+        <li><a href="#">Trade Stuff</a></li>
+      </ul>
+
+      <h3>Sponsors</h3>
+      <%= image_tag "ad125.jpg" %><br /><%= image_tag "ad125.jpg" %><br /><br />
+
+      <h3>Connect With Us</h3>
+      <ul>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+
+    </aside><!-- end of sidebar -->
+
+  </section><!-- end of #main content and sidebar-->
+
+  <footer>
+    <section id="footer-area">
+
+      <section id="footer-outer-block">
+        <aside class="footer-segment">
+          <h4>Friends</h4>
+          <ul>
+            <li><a href="#">one linkylink</a></li>
+            <li><a href="#">two linkylinks</a></li>
+            <li><a href="#">three linkylinks</a></li>
+          </ul>
+        </aside><!-- end of #first footer segment -->
+
+        <aside class="footer-segment">
+          <h4>Awesome Stuff</h4>
+          <ul>
+            <li><a href="#">one linkylink</a></li>
+            <li><a href="#">two linkylinks</a></li>
+            <li><a href="#">three linkylinks</a></li>
+          </ul>
+        </aside><!-- end of #second footer segment -->
+
+        <aside class="footer-segment">
+          <h4>Coolness</h4>
+          <ul>
+            <li><a href="#">one linkylink</a></li>
+            <li><a href="#">two linkylinks</a></li>
+            <li><a href="#">three linkylinks</a></li>
+          </ul>
+        </aside><!-- end of #third footer segment -->
+
+        <aside class="footer-segment">
+          <h4>Blahdyblah</h4>
+          <p>&copy; 2010 <a href="#">yoursite.com</a> Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. </p>
+        </aside><!-- end of #fourth footer segment -->
+
+      </section><!-- end of footer-outer-block -->
+
+    </section><!-- end of footer-area -->
+  </footer>
+
+</div><!-- #wrapper -->
+<!-- Free template created by http://freehtml5templates.com -->
+
+</body>
+</html>

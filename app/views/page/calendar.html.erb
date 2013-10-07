@@ -1,0 +1,33 @@
+<%= @my_time %>    <br/>
+<%= Date.today + 1.year %>   <br/>
+<%= @name + " " + @my_time.to_s %> <br/>
+<br/>
+
+<p><%= @month %> <%= @year %> Products</p>
+
+
+<%= calendar2( @month, @year ) %>
+
+<br/>
+
+<table border=1>
+  <tr>
+    <td>&nbsp;</td>
+    <% 6.times do |day| %>
+        <td><%= day + 1 %></td>
+    <% end %>
+  </tr>
+</table>
+
+<br/>
+
+<ol>
+<% @products.each do |product| %>
+<li><%= product.titlecase %></li>
+<% end %>
+</ol>
+
+<%= Date.today.wday %>
+<%= Date.today.month %>
+<% test = Date.today.month %> <br/>
+<%= Time.days_in_month(test) %>
